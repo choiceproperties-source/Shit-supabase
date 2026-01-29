@@ -1,0 +1,34 @@
+Audit my full-stack rental application project and generate a detailed completion plan. 
+
+1️⃣ Analyze the **frontend**:
+   - List all implemented features (forms, dashboards, validation, auto-save, file uploads, multilingual support, etc.)
+   - Identify any missing UX, validation, or real-time behaviors.
+
+2️⃣ Analyze the **Supabase backend**:
+   - Check all tables, columns, and relationships (applications, applicant info, co-applicants, occupancy, employment, financial info, references, signatures, documents, payments, status history).
+   - List which tables and columns are missing or need modifications.
+   - Identify missing RLS policies, authentication flows, and row-level security checks.
+   - Note what needs to be done for file storage buckets and permissions.
+
+3️⃣ Analyze **Edge Functions**:
+   - List which functions exist, which are placeholders, and which need deployment (e.g., send-email, recover-id).
+   - Identify missing email flows, triggers, and secret configurations (e.g., SendGrid API).
+
+4️⃣ Analyze **dashboards**:
+   - Applicant dashboard: confirm which features are implemented (status tracking, uploaded documents, application ID, payment info, bilingual display).
+   - Admin dashboard: confirm features (view all applications, mark payments, update statuses, view uploaded documents, statistics).
+
+5️⃣ Identify **missing features for production readiness**:
+   - Payment handling (manual vs automated)
+   - Security gaps (admin authentication, session handling)
+   - Bilingual email and UI coverage
+   - Error handling and edge cases
+   - Any leftover Python or non-Supabase logic that needs removal
+   - Hosting considerations (Netlify, serverless functions, or Supabase hosting)
+
+6️⃣ Output:
+   - A complete checklist of remaining tasks with prioritization (high, medium, low)
+   - Notes about any potential blockers if we continue on mobile only
+   - Suggestions for next steps to make the project fully functional and production ready
+
+Focus on **Supabase + frontend** workflow. Do not attempt automatic deployment or refactoring—only audit and list what’s remaining.
